@@ -1,7 +1,11 @@
 // Bring express
 const express = require('express');
+// Init the connect to the DB
+const connectDB = require('./config/db');
 // Init app variable avec express
 const app = express();
+// Connection à la DB
+connectDB();
 // Single end point to test
 app.get('/', (req, res) => res.send('API Running'));
 // si aucun port, utilise 5000
