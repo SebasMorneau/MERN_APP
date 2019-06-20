@@ -10,6 +10,11 @@ const app = express();
 // Connection à la DB
 connectDB();
 
+// Init Middelware
+app.use(express.json({
+    extended: false
+}));
+
 // Single end point to test
 app.get('/', (req, res) => res.send('API Running'));
 
