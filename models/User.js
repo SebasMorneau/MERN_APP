@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
     name: {
-        type: SVGAnimatedString,
+        type: String,
         requires: true
     },
     email: {
@@ -23,4 +23,4 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-modules.exports = User = mongoose.model('user', UserSchema);
+module.exports = User = mongoose.model('user', UserSchema);
